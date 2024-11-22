@@ -8,9 +8,8 @@ print("Current Working Directory:", os.getcwd())
 app = Flask(__name__)
 CORS(app)
 # Loading data
-movies_db = pd.read_csv("D:/CODING/MOVIE DATABASE WEBSITE/MoviesCreed/src/PYTHON/ml-32m/movies.csv")
-rating_db = pd.read_csv("D:/CODING/MOVIE DATABASE WEBSITE/MoviesCreed/src/PYTHON/ml-32m/ratings.csv")
-
+movies_db = pd.read_csv("ml-32m/movies.csv")
+rating_db = pd.read_csv("ml-32m/ratings.csv")
 
 @app.route('/api/movies/top10', methods=['GET'])
 def get_top_movies():
